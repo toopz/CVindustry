@@ -1,0 +1,311 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global}
+    \entry{tupper2021rolling}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=baf969b68ff749ca329c8b4e15c002e8}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul\bibnamedelima G},
+           given_i={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cf2b7f4cdc094c221fcd833ceb17d8dc}
+      \strng{fullhash}{cf2b7f4cdc094c221fcd833ceb17d8dc}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2021}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Theoretical Biology}
+      \field{title}{Rolling-Circle and Strand-displacement Mechanisms for Non-enzymatic RNA Replication at the Time of the Origin of Life}
+      \field{year}{2021}
+      \field{pages}{110822}
+      \range{pages}{1}
+    \endentry
+    \entry{cauret2020developmental}{article}{}
+      \name{author}{9}{}{%
+        {{hash=5134827a3c2d5c0285b7d80e37b33a84}{%
+           family={Cauret},
+           family_i={C\bibinitperiod},
+           given={Caroline\bibnamedelima MS},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d9d407d6d8eaff81823944cc1861af37}{%
+           family={Gansauge},
+           family_i={G\bibinitperiod},
+           given={Marie-Theres},
+           given_i={M\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c622e28ec1585916b799041314c8429a}{%
+           family={Furman},
+           family_i={F\bibinitperiod},
+           given={Benjamin\bibnamedelima LS},
+           given_i={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6a388c27c0f10b67e4ecd24fa0674e1f}{%
+           family={Knytl},
+           family_i={K\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+        {{hash=ab66bc4b9966596d47e916a327021e32}{%
+           family={Song},
+           family_i={S\bibinitperiod},
+           given={Xue-Ying},
+           given_i={X\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=9c4a92c846ce84f5c51f79641182dfc8}{%
+           family={Greenbaum},
+           family_i={G\bibinitperiod},
+           given={Eli},
+           given_i={E\bibinitperiod}}}%
+        {{hash=2e37c9cacf0d2390bdc2a61dde4ce9dc}{%
+           family={Meyer},
+           family_i={M\bibinitperiod},
+           given={Matthias},
+           given_i={M\bibinitperiod}}}%
+        {{hash=4b67d24b0063fcd51935739973a85a19}{%
+           family={Evans},
+           family_i={E\bibinitperiod},
+           given={Ben\bibnamedelima J},
+           given_i={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{a87fc88471d0f3e02dd6846cf6adeea4}
+      \strng{fullhash}{8b239b14e0598fd501c80e7b182cc25b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2020}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecular Biology and Evolution}
+      \field{number}{3}
+      \field{title}{Developmental systems drift and the drivers of sex chromosome evolution}
+      \field{volume}{37}
+      \field{year}{2020}
+      \field{pages}{799\bibrangedash 810}
+      \range{pages}{12}
+    \endentry
+    \entry{tupper2019can}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=147a5dd9a3c3ec335362ef8c03a5e42b}{%
+           family={Pudritz},
+           family_i={P\bibinitperiod},
+           given={Ralph\bibnamedelima E},
+           given_i={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=baf969b68ff749ca329c8b4e15c002e8}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul\bibnamedelima G},
+           given_i={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff30dc87c3d4ff323ac2ff3fd182605a}
+      \strng{fullhash}{c07cc7fab5426e82ec2933ec7d00f6cf}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2019}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecular biology and evolution}
+      \field{title}{Can the {RNA} World still function without cytidine?}
+      \field{year}{2019}
+    \endentry
+    \entry{shah2019survival}{article}{}
+      \name{author}{5}{}{%
+        {{hash=b9904d4526dbe59c46ec2a591eca5da7}{%
+           family={Shah},
+           family_i={S\bibinitperiod},
+           given={Vismay},
+           given_i={V\bibinitperiod}}}%
+        {{hash=4219b39c1ccf0dd94503d4be2cb36b3c}{%
+           prefix={de},
+           prefix_i={d\bibinitperiod},
+           family={Bouter},
+           family_i={B\bibinitperiod},
+           given={Jonathan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=7a025b7242e9a120d261552db1e2bcad}{%
+           family={*Pauli},
+           family_i={*\bibinitperiod},
+           given={Quinn},
+           given_i={Q\bibinitperiod}}}%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=baf969b68ff749ca329c8b4e15c002e8}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul\bibnamedelima G},
+           given_i={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{b0aac133f88479f12fcdc7231a563180}
+      \strng{fullhash}{ff1963afa155ee37888b703d53493e5d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2019}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Life}
+      \field{number}{3}
+      \field{title}{Survival of {RNA} Replicators Is Much Easier in Protocells Than in Surface-Based, Spatial Systems}
+      \field{volume}{9}
+      \field{year}{2019}
+      \field{pages}{65}
+      \range{pages}{1}
+    \endentry
+    \entry{pearce2018constraining}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5361099f258758c8c532fe3eced71ede}{%
+           family={Pearce},
+           family_i={P\bibinitperiod},
+           given={Ben\bibnamedelima KD},
+           given_i={B\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=147a5dd9a3c3ec335362ef8c03a5e42b}{%
+           family={Pudritz},
+           family_i={P\bibinitperiod},
+           given={Ralph\bibnamedelima E},
+           given_i={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=baf969b68ff749ca329c8b4e15c002e8}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul\bibnamedelima G},
+           given_i={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA}%
+      }
+      \strng{namehash}{be083d998df15e86b9ea1f9e3ba65c96}
+      \strng{fullhash}{dcd8d65a8634b748c985eee9634c7198}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2018}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astrobiology}
+      \field{number}{3}
+      \field{title}{Constraining the time interval for the origin of life on Earth}
+      \field{volume}{18}
+      \field{year}{2018}
+      \field{pages}{343\bibrangedash 364}
+      \range{pages}{22}
+    \endentry
+    \entry{tupper2017error}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9a47a36217519566fa321b397a19aaf1}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=baf969b68ff749ca329c8b4e15c002e8}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul\bibnamedelima G},
+           given_i={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cf2b7f4cdc094c221fcd833ceb17d8dc}
+      \strng{fullhash}{cf2b7f4cdc094c221fcd833ceb17d8dc}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2017}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of theoretical biology}
+      \field{title}{Error thresholds for {RNA} replication in the presence of both point mutations and premature termination errors}
+      \field{volume}{428}
+      \field{year}{2017}
+      \field{pages}{34\bibrangedash 42}
+      \range{pages}{9}
+    \endentry
+    \entry{tupper2017role}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f0baf4855aaa0f63e7d2905ccff76233}{%
+           family={\textbf{Tupper}},
+           family_i={\\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=99350c7c533f602025391f41d0ba0ac4}{%
+           family={*Shi},
+           family_i={*\bibinitperiod},
+           given={Kevin},
+           given_i={K\bibinitperiod}}}%
+        {{hash=765a30f2660df28c6bbf2be10089de42}{%
+           family={Higgs},
+           family_i={H\bibinitperiod},
+           given={Paul},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{e5a70549053c259416c7d0cec8835ab5}
+      \strng{fullhash}{c4b830c9276ae801d25ba639b85d83ad}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelyear}{2017}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Life}
+      \field{number}{4}
+      \field{title}{The role of templating in the emergence of {RNA} from the prebiotic chemical mixture}
+      \field{volume}{7}
+      \field{year}{2017}
+      \field{pages}{41}
+      \range{pages}{1}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

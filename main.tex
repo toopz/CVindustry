@@ -1,0 +1,438 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{multicol}
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.765]{geometry}
+% \setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+\usepackage{multicol}
+
+\makeatletter
+\renewcommand{\makehead}{%\@initializecommand
+  \setlength{\makeheaddetailswidth}{0.8\textwidth}%
+  \hfil%
+  \parbox{\makeheaddetailswidth}{%
+    \centering%
+    % name and title
+    \namestyle{\@firstname~\@lastname}%
+    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~|~\@title}}\\% \isundefined doesn't work on \@title, as LaTeX itself defines \@title (before it possibly gets redefined by \title) 
+    % optional detailed information
+    \if@details{%
+      \addressfont\color{color2}%
+      \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomakeheaddetails{\addresssymbol\@addressstreet}%
+        \ifthenelse{\equal{\@addresscity}{}}{}{\addtomakeheaddetails[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
+        \ifthenelse{\equal{\@addresscountry}{}}{}{\addtomakeheaddetails[~--~]{\@addresscountry}}%
+        \flushmakeheaddetails\@firstmakeheaddetailselementtrue\par\vspace{-\baselineskip}\null}% <========================
+      \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
+        \addtomakeheaddetails{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
+      \ifthenelse{\isundefined{\@email}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@email}}}%
+      \ifthenelse{\isundefined{\@homepage}}{}{\addtomakeheaddetails{\homepagesymbol\httplink{\@homepage}}}%
+      \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
+        \addtomakeheaddetails{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
+      \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomakeheaddetails{\@extrainfo}}%
+    \flushmakeheaddetails}\fi}\\[2.5em]}
+\makeatother
+
+
+% personal data
+\name{Andrew}{Tupper}
+\title{PhD Biochemistry}                               % optional, remove / comment the line if not wanted
+% \address{Corvallis, OR}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1 (315) 212-7308}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                     % optional, remove / comment the line if not wanted
+% \vspace{-10pt}
+\email{andrew.s.tupper@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.myname.webs.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+\usepackage[backend=biber, natbib,  citestyle=authoryear,maxcitenames=2,style=apa,sorting=none,url=false,firstinits=true,isbn=false,eprint=false,uniquename=false,maxbibnames=20]{biblatex}
+% \usepackage[backend=biber, natbib,style=apa]{biblatex}
+\DeclareLanguageMapping{english}{american-apa}
+\bibliography{publications} 
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+% \vspace{-20pt}
+\makecvtitle
+% \vspace*{-5mm}
+% \small{A French Master of Biodiversity, Ecology and Evolution, and fourth year PhD candidate in Biology. My PhD thesis focuses on the evolution of sex chromosomes and sex determination in Pipid frogs.}
+% \small{PhD candidate in Biochemistry and Astrobiology. My PhD thesis focuses on the application of computational modeling to understand the origin and replication of RNA in an RNA World.}
+% \small{Member of the McMaster University Origins Institute and PhD candidate in Biochemistry and Astrobiology. My PhD thesis utilizes computational modeling to further our knowledge on the origin and replication of RNA in an RNA World.}
+\vspace{-20pt}
+
+%\small{PhD candidate in Biochemistry and Astrobiology, and member of the Origins Institute. My PhD thesis utilizes computational modeling to further our understanding on the origin and replication of RNA in an RNA World.}
+
+% \small{Research Associate for the United States Department of Agriculture - Agricultural Research Services. My research focuses on the application of computer programming and software design to solve bioinformatic and population genetic problems facing the study of plant pathogens.}
+
+\small{Scientist and software engineer. My PhD thesis focused on the developement of computational modeling software to simulate chemical reaction mixtures and the process of RNA replication as it relates to the RNA World hypothesis for the origin of life. As a postdoc, I was employed as a research associate for the United States Department of Agriculture - Agricultural Research Services, where I developed bioinformatic software tools for the detection of plant pathogens using CRISPR-based diagnostics.}
+
+
+%\section{Previous Employment}
+
+%\vspace{6pt}
+
+%\begin{itemize}
+
+%\item{\cventry{July 2013--August 2013}{Construction Site Operative}{Eurogold Groundworks and Civil Engineering}{Moston}{}{\vspace{3pt}I was responsible for the administrative duties and the tidiness and general order of the site. I worked in a safety-oriented manner, often working alongside construction plant and machinery. At the end of my work with the company my colleagues praised my work ethic.}}
+
+%\vspace{6pt}
+
+%\item{\cventry{2009--2011}{Waiter, Catering and Banqueting}{Lavender Best Western Park Hall Hotel}{Charnock Richard}{}{\vspace{3pt}I worked for three years as a team leader providing silver service at weddings, stag/hen nights, and business conferences. I was often trusted with other jobs such as setting up conference rooms, moving beds around the hotel, and guiding big groups of customers to their rooms. As a team leader I would delegate tasks to a team of about 5 people, often new staff who needed training, and lead the group to service. During this time I worked in a highly professional manner and was focused to provide excellent customer service, even during high stress functions and events.}}
+
+%\vspace{6pt}
+
+%\item{\cventry{January 2008}{Assistant Electrician}{Ryan Electricals}{Southport}{}{\vspace{3pt}I spent a week working as an assistant electrician as part of my high school work experience. My roles included wiring plugs, tidying, and assisting with household electrical repairs and fittings.}}
+
+%\end{itemize}
+%\vspace{-10pt}
+%
+% \end{itemize}
+
+% \vspace{2pt}
+
+
+\section{Education}
+
+% \vspace{5pt}
+\vspace{5pt}
+
+
+\cventry{2015--2020}{PhD Biochemistry and Astrobiology}{McMaster University}{Hamilton, ON (Canada)}{}{}
+
+\cventry{2011--2015}{BS Interdisciplinary Science -- \textit{summa cum laude}}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{}
+
+
+\section{Relevant Coursework}
+\vspace{-5pt}
+\begin{multicols}{2}
+\begin{itemize}
+\item{Software Design and Documentation (Capstone)}
+\item{SHARCNET Advanced Research Computing}
+\item{Parallel Programming}
+\item{Machine Learning}
+\item{Advanced Algorithm Design}
+\item{Numerical Computing}
+\item{Graph Theory}
+\item{Data Structures}
+\end{itemize}
+\end{multicols}
+
+
+\section{Research Experience}
+\vspace{5pt}
+
+\cventry{2020--2021}{\textbf{Research Associate with Dr. Niklaus J. Gr{\"u}nwald}}{Horticultural Crops Research Laboratory}{Corvallis, OR (USA)}{}{}{
+\begin{itemize}
+\item{Population genetics of \textit{P. ramorum}, causal agent of sudden oak death}
+\item{Developement of software packages for CRISPR-based diagnostic assays}
+\item{System administrator for the \textit{'oomy'} compute cluster and web server}
+\end{itemize}
+}
+
+\vspace{5pt}
+\cventry{2015--2020}{\textbf{Graduate Researcher with Dr. Paul G. Higgs}}{McMaster University}{Hamilton, ON (Canada)}{}{
+\begin{itemize}
+\item{Designing computational models of non-enzymatic and enzymatic RNA replication}
+\item{Software development of massively parallel programs for high performance computing}
+\item{Lipid-catalyzed polymerization of unactivated RNA monomers in the \textit{'Planet Simulator'} - Origins lab}
+\end{itemize}
+}
+
+\vspace{5pt}
+\cventry{2012--2013}{\textbf{Undergraduate Researcher with Dr. James P. Ferris}}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{
+\begin{itemize}
+\item{Clay-catalyzed polymerization of activated RNA monomers}
+\item{Banin protocol - Quantitative ion exchange of clay minerals to simulate prebiotic Earth conditions}
+\end{itemize}
+}
+
+
+% \section{Teaching Experience}
+% \vspace{5pt}
+% \cventry{}{}{McMaster University}{Hamilton, ON (Canada)}{}{
+% \vspace{-12pt}
+% \begin{itemize}
+% \item{Public Lecture: Origins Institute -- Meet Our Young Scientists\null\hfill{2020}}
+% \item{Guest Lecturer: BIOCHEM 3D03 -- Metabolism and Regulation \null\hfill{2015-2020}}
+% \item{Teaching Assistant: BIOCHEM 3D03 -- Metabolism and Regulation \null\hfill{2015--2020}}
+% \item{Workshop Assistant : Origins Institute -- Digital Evolution Workshop \null\hfill{2019}}
+% \item{Private Tutor: High School Math and Sciences \null\hfill{2015--2017}}
+% \end{itemize}
+% }
+
+% % \newpage
+
+% % \vspace{5pt}
+% \cventry{}{}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{
+% \vspace{-12pt}
+% \begin{itemize}
+% \item{University Tutor: CHEM 4420 -- Microscopic Physical Chemistry \null\hfill{2014--2015}}
+% \item{University Tutor: MATH 2400 -- Differential Equations \null\hfill{2013--2015}}
+% \item{University Tutor: MATH 2010 -- Multivariable Calculus \null\hfill{2013--2015}}
+% \item{Teaching Assistant: CSCI 2300 -- Introduction to Algorithms \null\hfill{2013--2014}}
+% \item{RPI Tutor Time: Pre K-12 -- Basic Math and Sciences \null\hfill{2011--2013}}
+% \end{itemize}
+% }
+
+
+\section{Publications}
+\vspace{5pt}
+\nocite{*}
+\printbibliography[heading=none]
+\vspace{-5pt}
+\textbf{*} \textit{mentored undergraduate student}
+% \vspace{-5pt}
+% \newpage
+
+
+
+%\newpage
+
+%\bibliography{publications} 
+% \bibliographystyle{apa}
+% \printbibliography
+
+
+% \section{Conferences}
+
+% \vspace{5pt}
+% % \vspace{6pt}
+% % \vspace{-5pt}
+
+% % \begin{itemize}
+
+% %\vspace{6pt}
+
+% \cventry{2020}{\textbf{Poster Presentation}}{Gordon Research Conference for the Origins of Life}{Galveston, TX (USA)}{}{
+% Non-enzymatic Rolling-circle Replication in an RNA World
+% \begin{itemize}
+% \item{Andrew S. Tupper \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+
+% \cventry{2019}{\textbf{Poster Presentation}}{Astrobiology Science Conference (AbSciCon)}{Bellevue, WA (USA)}{}{
+% Can the RNA World still function without cytidine? 
+% \begin{itemize}
+% \item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+
+% \cventry{2018}{\textbf{Poster Presentation}}{Science of Early Life Conference}{Hamilton, ON (Canada)}{}{
+% Assessing the Plausibility of an AUG Alphabet for RNA Secondary Structure Formation and Replication
+% \begin{itemize}
+% \item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+% % \newpage
+
+% \cventry{2017}{\textbf{Poster Presentation}}{ONE Biophysics Conference}{Mississauga, ON (Canada)}{}{
+% Assessing the Plausibility of an AUG Alphabet for RNA Secondary Structure Formation and Replication
+% \begin{itemize}
+% \item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+% \newpage
+% \cventry{2017}{\textbf{Oral Presentation}}{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
+% Error thresholds for RNA replication in the presence of point mutations and premature termination errors
+% \begin{itemize}
+% \item{Andrew S. Tupper \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+
+% \cventry{2017}{\textbf{Oral Presentation} -- By Supervisor }{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
+% The role of templating in the emergence of RNA from the prebiotic chemical mixture
+% \begin{itemize}
+% \item{Andrew S. Tupper, Kevin Shi, \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+% \vspace{3pt}
+
+% \cventry{2016}{\textbf{Poster Presentation}}{Gordon Research Conference for the Origins of Life}{Galveston, TX (USA)}{}{
+% Error thresholds for RNA replication in the presence of point mutations and premature termination errors
+% \begin{itemize}
+% \item{Andrew S. Tupper \& Paul G. Higgs}
+% \end{itemize}
+% }
+
+
+% \section{Teaching Experience}
+% %\vspace{5pt}
+% \cventry{}{}{McMaster University}{Hamilton, ON (Canada)}{}{
+% \vspace{-12pt}
+% \begin{itemize}
+% \item{Public Lecture: Origins Institute -- Meet Our Young Scientists\null\hfill{2020}}
+% \item{Guest Lecturer: BIOCHEM 3D03 -- Metabolism and Regulation \null\hfill{2015-2020}}
+% \item{Teaching Assistant: BIOCHEM 3D03 -- Metabolism and Regulation \null\hfill{2015--2020}}
+% \item{Workshop Assistant : Origins Institute -- Digital Evolution Workshop \null\hfill{2019}}
+% \item{Private Tutor: High School Math and Sciences \null\hfill{2015--2017}}
+% \end{itemize}
+% }
+
+% \vspace{5pt}
+% \cventry{}{}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{
+% \vspace{-12pt}
+% \begin{itemize}
+% \item{University Tutor: CHEM 4420 -- Microscopic Physical Chemistry \null\hfill{2014--2015}}
+% \item{University Tutor: MATH 2400 -- Differential Equations \null\hfill{2013--2015}}
+% \item{University Tutor: MATH 2010 -- Multivariable Calculus \null\hfill{2013--2015}}
+% \item{Teaching Assistant: CSCI 2300 -- Introduction to Algorithms \null\hfill{2013--2014}}
+% \item{RPI Tutor Time: Pre K-12 -- Basic Math and Sciences \null\hfill{2011--2013}}
+% \end{itemize}
+% }
+
+% \section{Technical and Personal Skills}
+
+% % \vspace{-5pt}
+% \vspace{5pt}
+% \begin{itemize}
+% \item{\textbf{Programming Languages:} C, C++, python, R, Bash}
+% \item{\textbf{Parallel Languages:} MPI, openMP, CUDA, python3-multiprocessing}
+% \item{\textbf{Human Languages:} English, French}
+% \item{\textbf{Compute Server Skills:} website design, database infrastructure, Conda environments, general maintenance}
+% \item{\textbf{Other Skills:} Git, LaTeX, ViennaRNA, NetLogo, Scratch}
+% \end{itemize}
+
+% \newpage
+
+
+
+\section{Technical and Personal Skills}
+
+% \vspace{-5pt}
+\vspace{5pt}
+\begin{itemize}
+\item{\textbf{Programming Languages:} Python, C, C++, R, Bash}
+\item{\textbf{Parallel Languages:} openMPI / MPICH, openMP, CUDA, python3-multiprocessing}
+\item{\textbf{Human Languages:} English, French (limited)}
+\item{\textbf{Python Libraries:} NumPy, SciPy, SKLearn (Machine Learning), PyMC3 (Bayesian)}
+\item{\textbf{Other Skills:} Git, Docker, Conda, Linux, LaTeX}
+\end{itemize}
+
+
+% \section{Awards and Scholarships}
+
+% % \end{itemize}
+% \begin{itemize}
+
+% % \vspace{-5pt}
+% \vspace{5pt}
+% \item{McMaster University Karl Freeman Prize -- Best Doctoral Biochemistry Seminar \null\hfill{2020}}
+% \item{McMaster University Conference on Science of Early Life -- Best Poster \null\hfill{2018}}
+% \item{McMaster University Karl Freeman Prize -- Best Doctoral Biochemistry Seminar \null\hfill{2017}}
+% \item{McMaster University International Excellence Award \null\hfill{2017}}
+% \item{Ontario Graduate Scholarship \null\hfill{2015}}
+
+% \end{itemize}
+
+
+\section{References}
+
+% \vspace{6pt}
+ % \vspace{3pt}
+ \vspace{5pt}
+
+\begin{minipage}[ht]{0.33\textwidth}
+\textbf{Dr. Niklaus J. Gr{\"u}nwald}\\
+Postdoctoral Mentor\\
+USDA - ARS\\
+grunwaln@oregonstate.edu\\
+(541) 738-4049
+\end{minipage}
+\begin{minipage}[ht]{0.33\textwidth}
+\textbf{Dr. Paul G. Higgs}\\
+PhD Advisor\\
+McMaster University\\
+higgsp@mcmaster.ca\\
+(905) 525-9140 Ext. 26870
+\end{minipage}
+\begin{minipage}[ht]{0.33\textwidth}
+\textbf{Dr. Maikel C. Rheinstädter}\\
+PhD Supervisory Committee\\
+McMaster University\\
+rheinsm@mcmaster.ca\\
+(905) 525-9140 Ext. 23134
+\end{minipage}
+
+
+
+% \begin{itemize}
+
+% \item Dr. Ben Evans, McMaster University, Ph.D supervisor: evansb@mcmaster.ca, phone: (905) 525-9140 (Ext. 26973).
+
+% \item Dr. Marie Elliot, McMaster University, Ph.D committee member: melliot@mcmaster.ca, phone: (905) 525-9140 (Ext 24225).
+
+% \item Dr. Brian Golding, McMaster University, Ph.D committee member, Teaching Assistant supervisor (Bioinformatics): Golding@mcmaster.ca, phone: (905) 525-9140 (Ext 24829).
+
+% \end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
