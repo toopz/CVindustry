@@ -1,3 +1,30 @@
+\RequirePackage{filecontents}
+\begin{filecontents*}{moderncvcolorburgundy.sty}
+%% start of file `moderncvcolorburgundy.sty'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+%-------------------------------------------------------------------------------
+%                identification
+%-------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moderncvcolorburgundy}[2013/02/09 v1.3.0 modern curriculum vitae and letter color scheme: burgundy]
+
+%-------------------------------------------------------------------------------
+%                color scheme definition
+%-------------------------------------------------------------------------------
+\definecolor{color0}{rgb}{0,0,0}% black
+% \definecolor{color1}{rgb}{0.545098,0,0}% burgundy
+\definecolor{color1}{rgb}{0.0,0.6,0.0}% burgundy
+%\definecolor{color1}{rgb}{0.2,0.2,0.2}% Testcolor
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+\endinput
+%% end of file `moderncvcolorburgundy.sty'.
+\end{filecontents*}
+
 %% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
@@ -6,11 +33,12 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[12pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,letterpaper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
+% \moderncvstyle{}
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{red}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -21,7 +49,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.765]{geometry}
+\usepackage[scale=0.85]{geometry}
 % \setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -96,93 +124,129 @@
 % \small{A French Master of Biodiversity, Ecology and Evolution, and fourth year PhD candidate in Biology. My PhD thesis focuses on the evolution of sex chromosomes and sex determination in Pipid frogs.}
 % \small{PhD candidate in Biochemistry and Astrobiology. My PhD thesis focuses on the application of computational modeling to understand the origin and replication of RNA in an RNA World.}
 % \small{Member of the McMaster University Origins Institute and PhD candidate in Biochemistry and Astrobiology. My PhD thesis utilizes computational modeling to further our knowledge on the origin and replication of RNA in an RNA World.}
-\vspace{-20pt}
 
 %\small{PhD candidate in Biochemistry and Astrobiology, and member of the Origins Institute. My PhD thesis utilizes computational modeling to further our understanding on the origin and replication of RNA in an RNA World.}
 
 % \small{Research Associate for the United States Department of Agriculture - Agricultural Research Services. My research focuses on the application of computer programming and software design to solve bioinformatic and population genetic problems facing the study of plant pathogens.}
 
-\small{Scientist and software engineer. My PhD thesis focused on the developement of computational modeling software to simulate chemical reaction mixtures and the process of RNA replication as it relates to the RNA World hypothesis for the origin of life. As a postdoc, I was employed as a research associate for the United States Department of Agriculture - Agricultural Research Services, where I developed bioinformatic software tools for the detection of plant pathogens using CRISPR-based diagnostics.}
+
+% \vspace{-50pt}
+% \section{Professional Summary}
+
+% \small{Scientist and software engineer. My PhD thesis focused on the developement of computational modeling software to simulate chemical reaction mixtures and the process of RNA replication as it relates to the RNA World hypothesis for the origin of life. As a postdoc, I was employed as a research associate for the United States Department of Agriculture - Agricultural Research Services, where I developed bioinformatic software tools for the detection of plant pathogens using CRISPR-based diagnostics.}
 
 
-%\section{Previous Employment}
-
-%\vspace{6pt}
-
-%\begin{itemize}
-
-%\item{\cventry{July 2013--August 2013}{Construction Site Operative}{Eurogold Groundworks and Civil Engineering}{Moston}{}{\vspace{3pt}I was responsible for the administrative duties and the tidiness and general order of the site. I worked in a safety-oriented manner, often working alongside construction plant and machinery. At the end of my work with the company my colleagues praised my work ethic.}}
-
-%\vspace{6pt}
-
-%\item{\cventry{2009--2011}{Waiter, Catering and Banqueting}{Lavender Best Western Park Hall Hotel}{Charnock Richard}{}{\vspace{3pt}I worked for three years as a team leader providing silver service at weddings, stag/hen nights, and business conferences. I was often trusted with other jobs such as setting up conference rooms, moving beds around the hotel, and guiding big groups of customers to their rooms. As a team leader I would delegate tasks to a team of about 5 people, often new staff who needed training, and lead the group to service. During this time I worked in a highly professional manner and was focused to provide excellent customer service, even during high stress functions and events.}}
-
-%\vspace{6pt}
-
-%\item{\cventry{January 2008}{Assistant Electrician}{Ryan Electricals}{Southport}{}{\vspace{3pt}I spent a week working as an assistant electrician as part of my high school work experience. My roles included wiring plugs, tidying, and assisting with household electrical repairs and fittings.}}
-
-%\end{itemize}
-%\vspace{-10pt}
-%
-% \end{itemize}
-
-% \vspace{2pt}
-
-
+% Education
+\vspace{-50pt}
 \section{Education}
-
-% \vspace{5pt}
-\vspace{5pt}
-
 
 \cventry{2015--2020}{PhD Biochemistry and Astrobiology}{McMaster University}{Hamilton, ON (Canada)}{}{}
 
 \cventry{2011--2015}{BS Interdisciplinary Science -- \textit{summa cum laude}}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{}
 
 
-\section{Relevant Coursework}
-\vspace{-5pt}
+% Technical skills
+\vspace{-10pt}
+\section{Technical Skills}
+\vspace{-15pt}
 \begin{multicols}{2}
+\subsection{Programming}
 \begin{itemize}
-\item{Software Design and Documentation (Capstone)}
+\item{Proficient in Python, C, C++, R, and Bash. Basic knowledge of HTML, CSS, and javascript}
+\item{Parallel programming paradigms: MPI (MPICH and openMPI), threading (POSIX and openMP), and GPU (NVIDIA-CUDA)}
+\item{Python libraries: NumPy, SciPy, SymPy, Scikit-learn (Machine learning), and PyMC3 (Bayesian leaning)}
+\item{Code development on Unix clusters: Docker and Conda, job scheduling with SLURM and SGE}
+\item{Dedicated to software development best practices such as Git/GitHub and test-driven developement}
+\item{Server admin for the USDA, deployment and maintenance of databases and R-shiny websites}
+\item{Coded exclusively in VIM for 1-2 years}
+\end{itemize}
+
+\subsection{Problem Solving}
+\begin{itemize}
+\item{Numerical analysis of stiff and ordinary differential equations using Runge-Kutta methods}
+\item{Monte-Carlo and Gillespie based simulations of chemical kinetics and thermodynamics}
+% \item{Surface and lattice based models of nearest-neighbor stochastic processes}
+% \item{Kmer based algorithms for the analysis of genomic and population genetic data}
+% \item{Developement of CRISPR-based diagonostic assays of pathogens (SHERLOCK)}
+\end{itemize}
+
+\columnbreak
+\subsection{Problem Solving (Cont.)}
+\begin{itemize}
+% \item{Numerical analysis of stiff and ordinary differential equations using Runge-Kutta methods}
+% \item{Monte-carlo and Gillespie based simulations of chemical kinetics and thermodynamics}
+\item{Surface and lattice based models of nearest-neighbor stochastic processes}
+\item{Kmer based algorithms for the analysis of genomic and population genetic data}
+\item{Development of CRISPR-based diagnostic assays of pathogens using SHERLOCK protocol}
+\end{itemize}
+
+\subsection{Communication}
+\begin{itemize}
+\item{Proficient in scientific writing and presentations}
+\item{Author of 7 published papers (4 as first author)}
+\item{Awarded best PhD seminar twice, best poster once}
+\item{Mentored 5 graduate and 4 undergraduate students}
+\item{Led research lab during final year of PhD}
+\end{itemize}
+
+% \columnbreak
+\subsection{Relevant Coursework}
+\begin{itemize}
 \item{SHARCNET Advanced Research Computing}
+\item{Software Design and Documentation}
 \item{Parallel Programming}
-\item{Machine Learning}
-\item{Advanced Algorithm Design}
 \item{Numerical Computing}
-\item{Graph Theory}
-\item{Data Structures}
+\item{Machine Learning}
 \end{itemize}
 \end{multicols}
 
 
-\section{Research Experience}
-\vspace{5pt}
 
-\cventry{2020--2021}{\textbf{Research Associate with Dr. Niklaus J. Gr{\"u}nwald}}{Horticultural Crops Research Laboratory}{Corvallis, OR (USA)}{}{}{
+
+\vspace{-20pt}
+\section{Professional Experience}
+% \vspace{5pt}
+
+\cventry{2020--2021}{\textbf{Research Associate with Dr. Niklaus J. Gr{\"u}nwald}}{Horticultural Crops Research Laboratory}{Corvallis, OR (USA)}{}{
 \begin{itemize}
-\item{Population genetics of \textit{P. ramorum}, causal agent of sudden oak death}
-\item{Developement of software packages for CRISPR-based diagnostic assays}
-\item{System administrator for the \textit{'oomy'} compute cluster and web server}
+  \item{Development of python software packages for CRISPR-based diagnostic assays}
+  \item{System administrator for the \textit{'oomy'} compute cluster and web server}
+  \item{Population genetics of \textit{P. ramorum}, causal agent of sudden oak death}
 \end{itemize}
 }
 
 \vspace{5pt}
 \cventry{2015--2020}{\textbf{Graduate Researcher with Dr. Paul G. Higgs}}{McMaster University}{Hamilton, ON (Canada)}{}{
 \begin{itemize}
-\item{Designing computational models of non-enzymatic and enzymatic RNA replication}
-\item{Software development of massively parallel programs for high performance computing}
-\item{Lipid-catalyzed polymerization of unactivated RNA monomers in the \textit{'Planet Simulator'} - Origins lab}
+  \item{Software development of massively parallel programs for high performance computing}
+  \item{Designing computational models of non-enzymatic and enzymatic RNA replication}
+  \item{Lipid-catalyzed polymerization of unactivated RNA monomers in the \textit{'Planet Simulator'} - Origins lab}
 \end{itemize}
 }
 
 \vspace{5pt}
 \cventry{2012--2013}{\textbf{Undergraduate Researcher with Dr. James P. Ferris}}{Rensselaer Polytechnic Institute}{Troy, NY (USA)}{}{
 \begin{itemize}
-\item{Clay-catalyzed polymerization of activated RNA monomers}
-\item{Banin protocol - Quantitative ion exchange of clay minerals to simulate prebiotic Earth conditions}
+  \item{Clay-catalyzed polymerization of activated RNA monomers}
+  \item{Banin protocol - Quantitative ion exchange of clay minerals}
+  \item{Data analysis of chemical experiments}
 \end{itemize}
 }
+
+
+
+\vspace{-20pt}
+\section{Publications}
+% \vspace{5pt}
+\nocite{*}
+\printbibliography[heading=none]
+\vspace{-5pt}
+\textbf{*} \textit{mentored undergraduate student}
+% \vspace{-5pt}
+% \newpage
+
+
+
 
 
 % \section{Teaching Experience}
@@ -213,14 +277,14 @@
 % }
 
 
-\section{Publications}
-\vspace{5pt}
-\nocite{*}
-\printbibliography[heading=none]
-\vspace{-5pt}
-\textbf{*} \textit{mentored undergraduate student}
-% \vspace{-5pt}
-% \newpage
+% \section{Publications}
+% % \vspace{5pt}
+% \nocite{*}
+% \printbibliography[heading=none]
+% % \vspace{-5pt}
+% \textbf{*} \textit{mentored undergraduate student}
+% % \vspace{-5pt}
+% % \newpage
 
 
 
@@ -230,8 +294,8 @@
 % \bibliographystyle{apa}
 % \printbibliography
 
-
-% \section{Conferences}
+\vspace{-10pt}
+\section{Select Conferences}
 
 % \vspace{5pt}
 % % \vspace{6pt}
@@ -241,30 +305,30 @@
 
 % %\vspace{6pt}
 
-% \cventry{2020}{\textbf{Poster Presentation}}{Gordon Research Conference for the Origins of Life}{Galveston, TX (USA)}{}{
-% Non-enzymatic Rolling-circle Replication in an RNA World
-% \begin{itemize}
-% \item{Andrew S. Tupper \& Paul G. Higgs}
-% \end{itemize}
-% }
+\cventry{2020}{\textbf{Poster Presentation}}{Gordon Research Conference for the Origins of Life}{Galveston, TX (USA)}{}{
+Non-enzymatic Rolling-circle Replication in an RNA World
+\begin{itemize}
+\item{Andrew S. Tupper \& Paul G. Higgs}
+\end{itemize}
+}
 
 % \vspace{3pt}
 
-% \cventry{2019}{\textbf{Poster Presentation}}{Astrobiology Science Conference (AbSciCon)}{Bellevue, WA (USA)}{}{
-% Can the RNA World still function without cytidine? 
-% \begin{itemize}
-% \item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
-% \end{itemize}
-% }
+\cventry{2019}{\textbf{Poster Presentation}}{Astrobiology Science Conference (AbSciCon)}{Bellevue, WA (USA)}{}{
+Can the RNA World still function without cytidine? 
+\begin{itemize}
+\item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
+\end{itemize}
+}
 
 % \vspace{3pt}
 
-% \cventry{2018}{\textbf{Poster Presentation}}{Science of Early Life Conference}{Hamilton, ON (Canada)}{}{
-% Assessing the Plausibility of an AUG Alphabet for RNA Secondary Structure Formation and Replication
-% \begin{itemize}
-% \item{Andrew S. Tupper, Ralph E. Pudritz \& Paul G. Higgs}
-% \end{itemize}
-% }
+\cventry{2018}{\textbf{Poster Presentation}}{Science of Early Life Conference}{Hamilton, ON (Canada)}{}{
+Assessing the Plausibility of an AUG Alphabet for RNA Secondary Structure Formation and Replication
+\begin{itemize}
+\item{Andrew S. Tupper, Ralph E. Pudritz, \& Paul G. Higgs}
+\end{itemize}
+}
 
 % \vspace{3pt}
 % % \newpage
@@ -278,21 +342,21 @@
 
 % \vspace{3pt}
 % \newpage
-% \cventry{2017}{\textbf{Oral Presentation}}{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
-% Error thresholds for RNA replication in the presence of point mutations and premature termination errors
-% \begin{itemize}
-% \item{Andrew S. Tupper \& Paul G. Higgs}
-% \end{itemize}
-% }
+\cventry{2017}{\textbf{Oral Presentation}}{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
+Error thresholds for RNA replication in the presence of point mutations and premature termination errors
+\begin{itemize}
+\item{Andrew S. Tupper \& Paul G. Higgs}
+\end{itemize}
+}
 
 % \vspace{3pt}
 
-% \cventry{2017}{\textbf{Oral Presentation} -- By Supervisor }{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
-% The role of templating in the emergence of RNA from the prebiotic chemical mixture
-% \begin{itemize}
-% \item{Andrew S. Tupper, Kevin Shi, \& Paul G. Higgs}
-% \end{itemize}
-% }
+\cventry{2017}{\textbf{Oral Presentation} -- By Supervisor }{Astrobiology Science Conference (AbSciCon)}{Mesa, AZ (USA)}{}{
+The role of templating in the emergence of RNA from the prebiotic chemical mixture
+\begin{itemize}
+\item{Andrew S. Tupper, Kevin Shi, \& Paul G. Higgs}
+\end{itemize}
+}
 
 % \vspace{3pt}
 
@@ -345,17 +409,17 @@
 
 
 
-\section{Technical and Personal Skills}
+% \section{Technical and Personal Skills}
 
-% \vspace{-5pt}
-\vspace{5pt}
-\begin{itemize}
-\item{\textbf{Programming Languages:} Python, C, C++, R, Bash}
-\item{\textbf{Parallel Languages:} openMPI / MPICH, openMP, CUDA, python3-multiprocessing}
-\item{\textbf{Human Languages:} English, French (limited)}
-\item{\textbf{Python Libraries:} NumPy, SciPy, SKLearn (Machine Learning), PyMC3 (Bayesian)}
-\item{\textbf{Other Skills:} Git, Docker, Conda, Linux, LaTeX}
-\end{itemize}
+% % \vspace{-5pt}
+% % \vspace{5pt}
+% \begin{itemize}
+% \item{\textbf{Programming Languages:} Python, C, C++, R, Bash}
+% \item{\textbf{Parallel Languages:} openMPI / MPICH, openMP, CUDA, python3-multiprocessing}
+% \item{\textbf{Human Languages:} English, French (limited)}
+% \item{\textbf{Python Libraries:} NumPy, SciPy, SKLearn (Machine Learning), PyMC3 (Bayesian)}
+% \item{\textbf{Other Skills:} Git, Docker, Conda, Linux, LaTeX}
+% \end{itemize}
 
 
 % \section{Awards and Scholarships}
@@ -373,12 +437,12 @@
 
 % \end{itemize}
 
-
+\vspace{-10pt}
 \section{References}
 
 % \vspace{6pt}
  % \vspace{3pt}
- \vspace{5pt}
+ % \vspace{5pt}
 
 \begin{minipage}[ht]{0.33\textwidth}
 \textbf{Dr. Niklaus J. Gr{\"u}nwald}\\
@@ -401,6 +465,36 @@ McMaster University\\
 rheinsm@mcmaster.ca\\
 (905) 525-9140 Ext. 23134
 \end{minipage}
+
+
+
+% \section{References}
+
+% % \vspace{6pt}
+%  % \vspace{3pt}
+%  \vspace{5pt}
+
+% \begin{minipage}[ht]{0.33\textwidth}
+% \textbf{Dr. Niklaus J. Gr{\"u}nwald}\\
+% Postdoctoral Mentor\\
+% USDA - ARS\\
+% grunwaln@oregonstate.edu\\
+% (541) 738-4049
+% \end{minipage}
+% \begin{minipage}[ht]{0.33\textwidth}
+% \textbf{Dr. Paul G. Higgs}\\
+% PhD Advisor\\
+% McMaster University\\
+% higgsp@mcmaster.ca\\
+% (905) 525-9140 Ext. 26870
+% \end{minipage}
+% \begin{minipage}[ht]{0.33\textwidth}
+% \textbf{Dr. Maikel C. Rheinstädter}\\
+% PhD Supervisory Committee\\
+% McMaster University\\
+% rheinsm@mcmaster.ca\\
+% (905) 525-9140 Ext. 23134
+% \end{minipage}
 
 
 
