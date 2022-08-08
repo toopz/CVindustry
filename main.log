@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.8.8)  8 AUG 2022 06:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.8.8)  8 AUG 2022 07:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,7 +1044,7 @@ ntawesome/FontAwesome.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplb.pf
 b></usr/share/texmf/fonts/type1/public/tex-gyre/qplbi.pfb></usr/share/texmf/fon
 ts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre
 /qplri.pfb>
-Output written on main.pdf (2 pages, 260506 bytes).
+Output written on main.pdf (2 pages, 260508 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
