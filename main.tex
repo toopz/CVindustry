@@ -1,3 +1,4 @@
+\listfiles
 \RequirePackage{filecontents}
 \begin{filecontents*}{moderncvcolorburgundy.sty}
 %% start of file `moderncvcolorburgundy.sty'.
@@ -108,7 +109,8 @@
 %\newcites{book,misc}{{Books},{Others}}
 \usepackage[backend=biber, natbib,  citestyle=authoryear,maxcitenames=2,style=apa,sorting=none,url=false,firstinits=true,isbn=false,eprint=false,uniquename=false,maxbibnames=20]{biblatex}
 % \usepackage[backend=biber, natbib,style=apa]{biblatex}
-\DeclareLanguageMapping{english}{american-apa}
+% \bibliographystyle{apalike}
+% \DeclareLanguageMapping{english}{american-apa}
 \bibliography{publications} 
 %----------------------------------------------------------------------------------
 %            content
@@ -206,7 +208,7 @@
 \vspace{-20pt}
 \section{Professional Experience}
 % \vspace{5pt}
-\cventry{2022--present}{\textbf{Bioinformatics Software Engineer (remote)}}{BenchSci}{Canton, NY (USA)}{}{
+\cventry{2022--present}{\textbf{Bioinformatics Software Engineer (remote)}}{BenchSci}{Potsdam, NY (USA)}{}{
 \begin{itemize}
   \item{Development of ETL pipelines using Apache beam and Google cloud infrastructure}
   \item{Extraction and analysis of large scale bioinformatics databases}
