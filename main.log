@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 AUG 2025 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 SEP 2025 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,9 +600,11 @@ nput line 89.
 \cvitemwithcommentmainbox=\box70
 \cvitemwithcommentmainlength=\skip104
 \cvitemwithcommentcommentlength=\skip105
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/moderncv/moderncvcolorred.sty
-Package: moderncvcolorred 2024-07-18 v2.4.1 modern curriculum vitae and letter 
-color scheme: red
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/moderncv/moderncvcolororange.sty
+Package: moderncvcolororange 2024-07-18 v2.4.1 modern curriculum vitae and lett
+er color scheme: orange
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/moderncv/moderncvcolors.tex))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
@@ -1397,8 +1399,8 @@ moderncvskillmatrix.sty    2024-07-18 v2.4.1 modern curriculum vitae and letter
 multirow.sty    2024/11/12 v2.9 Span multiple rows of a table
 arydshln.sty    2019/02/21 v1.76 
 ufontawesomefree0.fd
-moderncvcolorred.sty    2024-07-18 v2.4.1 modern curriculum vitae and letter co
-lor scheme: red
+moderncvcolororange.sty    2024-07-18 v2.4.1 modern curriculum vitae and letter
+ color scheme: orange
 moderncvcolors.tex
 multicol.sty    2024/09/14 v1.9i multicolumn formatting (FMi)
 inputenc.sty    2024/02/08 v1.3d Input encoding file
@@ -1467,8 +1469,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  34703 strings out of 473190
- 675354 string characters out of 5715801
- 1621424 words of memory out of 5000000
+ 675408 string characters out of 5715801
+ 1621436 words of memory out of 5000000
  57364 multiletter control sequences out of 15000+600000
  608711 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1480,7 +1482,7 @@ ype1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/tex-gyre/qplbi.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
 /tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-g
 yre/qplri.pfb>
-Output written on main.pdf (2 pages, 294628 bytes).
+Output written on main.pdf (2 pages, 294641 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
